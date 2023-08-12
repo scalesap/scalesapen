@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+ <link rel="stylesheet" href="maineng.css">
+  </head>
+<body>
+
+<header>
+  <b>Julia Korolionock</b>
+  <select class="lang">
+          <option value="cv-ru">RU</option>
+          <option value="cv-eng">ENG</option>
+          </select>
+</header>
+<aside>
+   <div class="address">
+    <ul class="add">
+      <li> <img src="email.png" alt="email" width="23" height="23"> EMAIL</li>
+   <p> <a href="mailto:julia_korolenok@mail.ru">julia_korolenok@mail.ru</a> </p>
+   <li> <img src="telephone.png" alt="phone" width="21" height="21"> PHONE</li>
+   <p>+375447077768</p>
+   <li> <img src="link.png" alt="link" width="30" height="30">LINKEDIN</li>
+   <p><a href="https://www.linkedin.com/in/julia-korolionock" target="_blank" >julia korolionock</a><p>
+   </ul>
+  </div>
+</aside>
+<main>
+  <section class="experience">
+    <h1> <b>WORK EXPERIENCE </b> </h1>
+    <p> <b>  Assessor-tester</b></p>
+    <p>    Yandex <i>(February 2022- up to the present)</i> </p>
+    <ul>
+      <li>Regression testing of different apps</li>
+      <li>Writing bug-reports</li>
+      <li>Game testing experience</li>
+      <li> Android/iOS Mobile Application Testing</li>
+      <li>Work experience with Android Sudio (check logs)</li>
+    <li> Testing web applications </li>
+    <li> Working with DevTools Console, Fiddler</li>
+    </ul>
+
+  </section>
+  <section class="skill">
+    <h2> <b> SKILLS </b> </h2>
+    <ul>
+      <li> Advanced user MS Office </li>
+      <li>Knowledge of programming languages HTML/CSS, Phython</li>
+      <li>Knowledge of Git/GitHub, VS Code, BrowserStack, Postman, Fiddler, Charles, JIRA</li>
+      <li>Analitical skills</li>
+       <li>Attention to detail</li>
+       <li>Languages: russian, belarusian, english (<a href="https://www.efset.org/cert/gEj1Gk" target="_blank">B1</a>)</li>
+    </ul>
+  </section>
+  <section class="education">
+    <h3> <b> EDUCATION </b> </h3>
+    <p> <b>BSUPC </b> (2017-2021) </p>
+    <p> <i> The Institute of Tourism and Management in Sports</i> </p>
+    <p> Qualification: specialist of tourism</p>
+
+  </section>
+  <section class="course">
+    <h3> <b> COURSE </b> </h3>
+    <p><b>Epam:</b> Automated Testing Foundations (in progress) </p>
+    <p><b>Epam:</b> Software Testing Introduction</p>
+
+
+  </section>
+</main>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const select = document.querySelector(".lang");
+      let url = window.location.href, value;
+      for ({
+              value
+          } of select.options) {
+          if (value && url.includes(value, 19)) {
+              select.value = value;
+          }
+      };
+      select.addEventListener("change", _ => {
+      if(!select.value) return;
+      url = `file:///C:/Users/julia/Desktop/${select.value}.html`;
+      window.location.href = url;
+      })
+  });
+</script>
+</html>
