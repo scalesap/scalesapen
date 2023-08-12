@@ -11,8 +11,8 @@
 <header>
   <b>Julia Korolionock</b>
   <select class="lang">
-          <option value="cv-ru">RU</option>
-          <option value="cv-eng">ENG</option>
+          <option value="scalesapru">RU</option>
+          <option value="scalesapen">ENG</option>
           </select>
 </header>
 <aside>
@@ -83,7 +83,7 @@
       };
       select.addEventListener("change", _ => {
       if(!select.value) return;
-      url = `file:///C:/Users/julia/Desktop/${select.value}.html`;
+      url = ` https://scalesap.github.io/${select.value}/`;
       window.location.href = url;
       })
   });
